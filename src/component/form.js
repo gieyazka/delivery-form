@@ -2,34 +2,26 @@ import React from "react";
 import {
   Grid,
   TextField,
-  Checkbox,
-  FormGroup,
   FormControlLabel,
-  FormControl,
-  FormLabel,
   Card,
   CardContent,
-  CardAction,
   RadioGroup,
   Radio,
   Button,
-  MenuItem,
-  Select,
-  InputLabel,
 } from "@material-ui/core";
 import moment from "moment";
 import DestSelect from "./destSelect.js";
 
 import { Alert } from "@material-ui/lab";
-import { useForm, Controller } from "react-hook-form";
+import { useForm } from "react-hook-form";
 const Form = () => {
   const [destState, setDestState] = React.useState([{}]);
   const {
     register,
-    control,
+
     handleSubmit,
     setValue,
-    watch,
+
     errors,
     getValues,
     reset,
@@ -95,9 +87,10 @@ const Form = () => {
       .then(async (res) => {
         // console.log(data);
         // console.log(res);
-        // e.target.reset();
+
         await sendEmail(data, res.id);
         alert("Send Success");
+        e.target.reset();
       });
   };
   const [otherCost, setOtherCost] = React.useState(true);

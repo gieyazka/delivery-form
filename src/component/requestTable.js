@@ -440,8 +440,8 @@ const ReqTable = () => {
           ]}
           options={{
             // exportButton: true,
-            // exportCsv: (columns, data) => {
-            //   excelData(data);
+            // exportCsv: async (columns, data) => {
+            //   await excelData(data);
             //   // return columns, data;
             // },
             search: false,

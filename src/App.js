@@ -1,17 +1,10 @@
-import logo from "./logo.svg";
 import "./App.css";
 import Form from "./component/form.js";
 import Status from "./component/status.js";
 import Test from "./component/test.js";
 
 import RequestTable from "./component/requestTable.js";
-import {
-  BrowserRouter as Router,
-  Route,
-  Link,
-  useLocation,
-  Switch,
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 function App() {
   return (
     <div>
